@@ -51,19 +51,19 @@ function makeTable (tblData) {
         // of the same row
         Object.entries(obj).forEach(([key, value]) => {
         
-            // // if it is city, state, country : capitalize all letters
-            // if (key == "state" || key == "country"){
-            //     value = value.toUpperCase();
-            // }
+            // if it is city, state, country : capitalize all letters
+            if (key == "state" || key == "country"){
+                value = value.toUpperCase();
+            }
 
-            // // if it is city or shape, only cap initials 
-            // else if (key == "city"  || key == "shape"){
-            //     value = init_cap(value);
-            // }
+            // if it is city or shape, only cap initials 
+            else if (key == "city"  || key == "shape"){
+                value = init_cap(value);
+            }
 
-            // // others left alone
-            // else
-            // value = value;
+            // others left alone
+            else
+            value = value;
 
             // add tag td for data 
             var cell = row.append("td");
@@ -114,38 +114,6 @@ function getAllInpt(){
             inpValArr = inpValArr;        
     });
 }
-
-
-// =================== DEVELOPING ===================
-// function exeFilter() {
-   
-//     // Prevent the page from refreshing
-//     d3.event.preventDefault();
-
-//     // clear old table
-//     tbody.html("");
-
-//     // get the datetime from the user input 
-//     var dateInput = dtForm.property("value");
-//     console.log(dateInput);
-
-//     if (dateInput != "") {
-       
-//         // filter out datetime data based on input
-//         var ftrData = events.filter(event => event.datetime == dateInput);
-//         console.log(ftrData);
-
-//         // create tabe post-filtered 
-//         makeTable(ftrData);
-//     }
-    
-//     else
-//         makeTable(events);
-// };
-
-// Array.prototype.every()
-// use method ".every()" to test every single value
-// return BOOLENS of  true/false 
 
 
 function filterData(event) {
