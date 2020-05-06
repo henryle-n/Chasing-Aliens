@@ -1,4 +1,28 @@
-events = data
+// ================= DECLARE SOME VARS =====================
+// from data.js
+var events = data;
+
+// access the body of the table 
+var tbody = d3.select("tbody");
+
+// get first and last dates on the data array
+var fdate = data[0].datetime;
+var ldate = data.slice(-1)[0].datetime;
+
+// then feed that to placeholder of input
+d3.select("#datetime").attr("placeholder", `${fdate} to ${ldate}`);
+
+// Select the button & form container
+var filButton = d3.select("#filter-btn");
+var inpForm = d3.select("#input-form");
+
+// event handlers for only datetime filter
+//filButton.on("click", exeFilter); // filter button is clicked 
+//inpForm.on("submit", exeFilter); // when "enter" key is hit
+
+// event handler for all filters
+filButton.on("click", exeMultiFilter); // filter button is clicked 
+inpForm.on("submit", exeMultiFilter); // when "enter" key is hit
 
 // ============= DECLARE SOME FUNCTIONS ==============
 // capitalize only initials
@@ -14,30 +38,45 @@ function init_cap(str) {
     return str.join(" ");
 };
 
-// capitalize all letters of that str
-function cap_all(str) {
-    return str.toUpperCase();
-};
+// make table from array of objects
+function makeTable (tblData) {
+    tblData.forEach(obj => {
+        // print out the retrieve object
+        console.log("making table...", obj); 
+        
+        // add row for each object in the array
+        var row = tbody.append("tr");
 
-// ============== END DECLARING FUNCTIONS ===============
+        //within each object, get the key-value pairs to fill each cell
+        // of the same row
+        Object.entries(obj).forEach(([key, value]) => {
+        
+            // if it is city, state, country : capitalize all letters
+            if (key == "state" || key == "country"){
+                value = value.toUpperCase();
+            }
 
-// ================= D3 SECTION =====================
-// from data.js
-var tableData = data;
+            // if it is city or shape, only cap initials 
+            else if (key == "city"  || key == "shape"){
+                value = init_cap(value);
+            }
 
-// access the body of the table 
-var tbody = d3.select("tbody");
+            // others left alone
+            else
+            value = value;
 
-// get first and last dates on the data array
-var fdate = data[0].datetime;
-var ldate = data.slice(-1)[0].datetime;
+            // add tag td for data 
+            var cell = row.append("td");
 
-// then feed that to placeholder of input
-d3.select("#datetime").attr("placeholder", `${fdate} to ${ldate}`);
+            // add data 
+            cell.text(value);
+            });
+    });
+};   // ============== END DECLARING FUNCTIONS ===============
 
-// Select the button & form container
-var filButton = d3.select("#filter-btn");
-var inpForm = d3.select("#input-form");
+
+// upon page loading, display all table data
+makeTable(events)
 
 // =============== GET FORM INPUT ======================
 
@@ -56,10 +95,6 @@ var ctrForm = d3.select("#country");
 // Select the shape input form
 var shpForm = d3.select("#shape");
 
-
-// Create event handlers 
-filButton.on("click", exeFilter); // filter button is clicked 
-inpForm.on("submit", exeFilter); // when "enter" key is hit
 
 var keyList = Object.keys(data[0]);
 console.log(keyList);
@@ -82,20 +117,20 @@ function getInput (id) {
 };
 
 // loop and get a object of filtering parameters input by user
-var inpVal;
-var inpValArr = {};
-
+var inpVal;  // each input from the form
+var inpValArr = {};  // create an object to hold the key-value pairs
+// ---------------------------- //
 Object.entries(idArr).forEach(([key, value]) => {
     console.log(value);
+    // get the user input value from the UI form 
     inpVal = getInput(value);
-    console.log(`input val is ${inpVal}`);
-    if (inpVal == ""){
-        inpVal = "any";
-    }
-    else
+    console.log(`getting input val for ${key, value}:${inpVal}`);
+    if (inpVal != ""){
+        console.log(`valid input val is ${key, inpVal}`);
         inpVal = inpVal;
-  
-    inpValArr[key] = inpVal;
+    }
+
+    inpValArr[key] = inpVal; // push the key with value into object
 });
 
 console.log("inpValArr is : ", inpValArr);
@@ -118,45 +153,34 @@ function exeFilter() {
     var dateInput = dtForm.property("value");
     console.log(dateInput);
 
-    // filter out datetime data based on input
-    var filterData = events.filter(event => event.datetime == dateInput);
-    console.log(filterData);
+    if (dateInput != "") {
+       
+        // filter out datetime data based on input
+        var ftrData = events.filter(event => event.datetime == dateInput);
+        console.log(ftrData);
+
+        // create tabe post-filtered 
+        makeTable(ftrData);
+    }
     
-        
-    filterData.forEach(obj => {
-        // print out the retrieve object
-        console.log(obj); 
-        
-        // add row
-        var row = tbody.append("tr");
-        Object.entries(obj).forEach(([key, value]) => {
-        
-            // if it is city, state, country : capitalize all letters
-            if (key == "state" || key == "country"){
-                value = cap_all(value);
-            }
-
-            // if it is city or shape, only cap initials 
-            else if (key == "city"  || key == "shape"){
-                value = init_cap(value);
-            }
-            else
-                value = value;
-
-            // add data into the row
-
-            var cell = row.append("td");
-
-            // add data 
-            cell.text(value);
-            });
-    });
+    else
+        makeTable(events);
 };
 
-// var datetime = ;
-// var city;
-// var state;
-// var country;
-// var shape;
-// var durationMinutes;
-// var comments;
+// Array.prototype.every()
+// use method ".every()" to test every single value
+// return BOOLENS of  true/false 
+function filterData(event) {
+   return Object.keys(this).every(key => event[key] == this[key]);
+};
+
+function exeMultiFilter () {
+    // Prevent the page from refreshing
+    d3.event.preventDefault();
+
+    // clear old table
+    tbody.html("");
+    
+    // filter all conditions and return the final data
+    var ftrD = events.filter(filterData, inpValArr);
+}

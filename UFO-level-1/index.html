@@ -29,7 +29,7 @@
       <h1>UFO Sightings</h1>
       <p>The Truth is Out There</p>
     </div>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row margin-top-50">
         <div class="col-md-2">
           <aside class="filters">
@@ -37,44 +37,11 @@
               <div class="panel-heading">Filter Search</div>
               <div class="panel-body">
                 <form id="input-form">
-
-                  <!-- form with multiple input fields is not supported with "enter-to-submit" action
-                  the work around is to create a hidden button to take "enter-to-submit" command and submit the entire form -->
-                  <input type="submit" value="submit" style="position: absolute; left: -9999px; 
-                    width: -9999px; height: -9999px;" tabindex="-1" />
-
                   <div class="form-group">
                     <ul class="list-group" id="filters" type="submit" value="submit">
-
-                      <!-- =======FILTER GROUP ======= -->
-                      <!-- date -->
                       <li class="filter list-group-item">
                         <label for="datetime">Enter a Date</label>
                         <input class="form-control" id="datetime" type="text" placeholder="01/01/2010">
-                      </li>
-
-                      <!-- city  -->
-                      <li class="filter list-group-item">
-                        <label for="city">Enter a City</label>
-                        <input class="form-control" id="city" type="text" placeholder="Benton, Bonita, etc.">
-                      </li>
-
-                      <!-- state  -->
-                      <li class="filter list-group-item">
-                        <label for="state">Enter a State</label>
-                        <input class="form-control" id="state" type="text" placeholder="AR, CA, OR, etc.">
-                      </li>
-
-                      <!-- country  -->
-                      <li class="filter list-group-item">
-                        <label for="country">Enter a Country</label>
-                        <input class="form-control" id="country" type="text" placeholder="US, CA">
-                      </li>
-
-                      <!-- shape  -->
-                      <li class="filter list-group-item">
-                        <label for="shape">Enter a Shape</label>
-                        <input class="form-control" id="shape" type="text" placeholder="Changing, Fireball, etc.">
                       </li>
                     </ul>
                   </div>
