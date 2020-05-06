@@ -99,6 +99,7 @@ var inpVal;  // each input from the form
 var inpValArr = {};  // create an object to hold the key-value pairs
 // ---------------------------- //
 function getAllInpt(){
+    inpValArr = {} 
     Object.entries(idArr).forEach(([key, value]) => {
         console.log(value);
         // get the user input value from the UI form 
@@ -115,44 +116,48 @@ function getAllInpt(){
 }
 
 
-
-function exeFilter() {
+// =================== DEVELOPING ===================
+// function exeFilter() {
    
-    // Prevent the page from refreshing
-    d3.event.preventDefault();
+//     // Prevent the page from refreshing
+//     d3.event.preventDefault();
 
-    // clear old table
-    tbody.html("");
+//     // clear old table
+//     tbody.html("");
 
-    // get the datetime from the user input 
-    var dateInput = dtForm.property("value");
-    console.log(dateInput);
+//     // get the datetime from the user input 
+//     var dateInput = dtForm.property("value");
+//     console.log(dateInput);
 
-    if (dateInput != "") {
+//     if (dateInput != "") {
        
-        // filter out datetime data based on input
-        var ftrData = events.filter(event => event.datetime == dateInput);
-        console.log(ftrData);
+//         // filter out datetime data based on input
+//         var ftrData = events.filter(event => event.datetime == dateInput);
+//         console.log(ftrData);
 
-        // create tabe post-filtered 
-        makeTable(ftrData);
-    }
+//         // create tabe post-filtered 
+//         makeTable(ftrData);
+//     }
     
-    else
-        makeTable(events);
-};
+//     else
+//         makeTable(events);
+// };
 
 // Array.prototype.every()
 // use method ".every()" to test every single value
 // return BOOLENS of  true/false 
+
+
 function filterData(event) {
    return Object.keys(this).every(key => event[key] == this[key]);
 };
 
-var ftrD;
+
+
+let ftrD;
 function exeMultiFilter () {
     // Prevent the page from refreshing
-    // d3.event.preventDefault();
+    d3.event.preventDefault();
 
     // clear old table
     tbody.html("");
@@ -160,10 +165,10 @@ function exeMultiFilter () {
     getAllInpt();
 
 
-    if (Object.keys(inpValArr).length !== 0) { 
-    // filter all conditions and return the final data
-    ftrD = events.filter(filterData, inpValArr);
-    makeTable(ftrD);}
+    if (Object.keys(inpValArr).length != 0) { 
+        // filter all conditions and return the final data
+        let ftrD = events.filter(filterData, inpValArr);
+        makeTable(ftrD);}
     else
         makeTable(events);
 }

@@ -38,10 +38,7 @@
               <div class="panel-body">
                 <form id="input-form">
 
-                  <!-- form with multiple input fields is not supported with "enter-to-submit" action
-                  the work around is to create a hidden button to take "enter-to-submit" command and submit the entire form -->
-                  <input type="submit" value="submit" style="position: absolute; left: -9999px; 
-                    width: -9999px; height: -9999px;" tabindex="-1" />
+                  
 
                   <div class="form-group">
                     <ul class="list-group" id="filters" type="submit" value="submit">
@@ -76,9 +73,18 @@
                         <label for="shape">Enter a Shape</label>
                         <input class="form-control" id="shape" type="text" placeholder="Changing, Fireball, etc.">
                       </li>
+
+
                     </ul>
                   </div>
+
+
                   <button id="filter-btn" type="button" class="btn btn-primary">Run Filter</button>
+                <!-- form with multiple input fields is not supported with "enter-to-submit" action
+                  the work around is to create a hidden button to take "enter-to-submit" command and submit the entire form -->
+                  <input type="submit" value="submit" style="position: absolute; left: -9999px; 
+                    width: -9999px; height: -9999px;" tabindex="-1" />
+                
                 </form>
               </div>
             </div>
