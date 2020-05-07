@@ -83,8 +83,7 @@ makeTable(events)
 // Select the date time input form
 var dtForm = d3.select("#datetime");
 
-// id of all input boxes
-// var idArr = ["#datetime", "#city", "#state", "#country", "#shape"];
+// id array of all input boxes
 var idArr = {
     datetime : "#datetime",
     city : "#city",
@@ -99,7 +98,7 @@ var inpVal;  // each input from the form
 var inpValArr = {};  // create an object to hold the key-value pairs
 // ---------------------------- //
 function getAllInpt(){
-    inpValArr = {} 
+    inpValArr = {};
     Object.entries(idArr).forEach(([key, value]) => {
         console.log(value);
         // get the user input value from the UI form 
@@ -111,7 +110,7 @@ function getAllInpt(){
             inpValArr[key] = inpVal; // push the key with value into object
         }
         else
-            inpValArr = inpValArr;        
+            inpValArr = inpValArr;      
     });
 }
 
