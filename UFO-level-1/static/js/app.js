@@ -83,27 +83,27 @@ makeTable(events)
 
 
 var dateInput;
-
+var filterData
+var text;
 function exeFilter() {
     // make sure everytime button is click, filter start fresh
+    // all objects reset back to empty
     dateInput = ""
+    tbody.html("");
+    text = ""
 
     // Prevent the page from refreshing
     d3.event.preventDefault();
 
-    // clear old table
-    tbody.html("");
-
     // get the datetime from the user input 
     dateInput = d3.select("#datetime").property("value");
-
+    
     // select status update box
-    var status = d3.select("#sitRep")
 
     // if no date input :: make the original table and post message
-    var filterData;
     if (dateInput=='' || dateInput==0){
-        filterData = events;    
+        filterData = events;
+        text = "WARNING: No filter applied, please input at least one & try again ...";
     }
 
     else
@@ -116,22 +116,23 @@ function exeFilter() {
     var ftrDLen = Object.keys(filterData).length
 
     // post status update
-    var status = d3.select("#sitRep").text("STATUS:")
+    d3.select("#sitRep").text("STATUS:")
     .append("p").attr("id", "user-notif")
     .text("Finished Retrieving : " + ftrDLen + " Records")
     .append("p").attr("id", "usNoteDate")
     .text(new Date());
+    
 
     // if filter is not in table's data, tell user to check input
-    if (ftrDLen == 0) {
-            status.append("p").attr("id", "noData")
-            .text("No data found, please check filters and try again..."); 
+    if (dateInput != "" && ftrDLen == 0) {
+        d3.select("#sitRep").append("p").attr("id", "noData")
+        .text("No data found, please check date input and try again ..."); 
     }
 
     // if filter is not input, notify user
-    else if (dateInput=='' || dateInput==0 && ftrDLen != 0) {
-                status.append("p").attr("id", "noData")
-                .text("WARNING: No filter applied, please input at least one & try again ..."); 
+    else if (dateInput == "" && ftrDLen != 0) {
+        d3.select("#sitRep").append("p").attr("id", "noData")
+        .text(text); 
     }
 
 };
