@@ -100,5 +100,24 @@ function exeFilter() {
     // filter out datetime data based on input
     var filterData = events.filter(event => event.datetime == dateInput);
     makeTable(filterData);
+
+    var status = d3.select("#sitRep").text("STATUS:")
+    .append("p").attr("id", "user-notif")
+    .text("Finished Retrieving : " + ftrDLen + " Records")
+    .append("p").attr("id", "usNoteDate")
+    .text(new Date());
+
+    // if filter is not in table's data, tell user to check input
+    if (Object.keys(inpValArr).length != 0 && ftrDLen == 0) {
+            status.append("p").attr("id", "noData")
+            .text("No data found, please check filters and try again..."); 
+    }
+
+    // if filter is not input, notify user
+    else if (Object.keys(inpValArr).length == 0 && ftrDLen != 0) {
+                status.append("p").attr("id", "noData")
+                .text("WARNING: No filter applied, please input at least one & try again ..."); 
+}
+
 };
 
