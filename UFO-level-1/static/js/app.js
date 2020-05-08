@@ -1,6 +1,6 @@
 // ================= DECLARE SOME VARS =====================
 // from data.js
-var events = data;
+var tableData = data;
 
 // access the body of the table 
 var tbody = d3.select("tbody");
@@ -15,11 +15,6 @@ d3.select("#datetime").attr("placeholder", `${fdate} to ${ldate}`);
 // Select the button & form container
 var filButton = d3.select("#filter-btn");
 var inpForm = d3.select("#input-form");
-
-
-// GET FORM INPUT 
-// Select the date time input form
-var dtForm = d3.select("#datetime");
 
 // Create event handlers 
 filButton.on("click", exeFilter); // filter button is clicked 
@@ -44,7 +39,6 @@ function init_cap(str) {
 function makeTable (tblData) {
     tblData.forEach(obj => {
         // print out the retrieve object
-        console.log("making table...", obj); 
         
         // add row for each object in the array
         var row = tbody.append("tr");
@@ -77,11 +71,14 @@ function makeTable (tblData) {
 };   // ============== END DECLARING FUNCTIONS ===============
 
 
-// upon page loading, display all table data
+//============= UPON PAGE LOADING RUN THE DEFAULT TABLE WITH ALL DATA ===========
+
+// assign new var called events from data
+var events = data
 makeTable(events)
 
 
-// when click or hit enter: run filter for table
+
 function exeFilter() {
    
     // Prevent the page from refreshing
@@ -91,18 +88,10 @@ function exeFilter() {
     tbody.html("");
 
     // get the datetime from the user input 
-    var dateInput = dtForm.property("value");
-    console.log(dateInput);
-    if (dateInput != "") {
-       
-        // filter out datetime data based on input
-        var filterData = events.filter(event => event.datetime == dateInput);
-        console.log(filterData);
+    var dateInput = d3.select("#datetime").property("value");
 
-        // create tabe post-filtered 
-        makeTable(filterData);
-    }
-    
-    else
-        makeTable(events);
+    // filter out datetime data based on input
+    var filterData = events.filter(event => event.datetime == dateInput);
+    makeTable(filterData);
 };
+
