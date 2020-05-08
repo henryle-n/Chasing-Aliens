@@ -82,9 +82,6 @@ makeTable(events)
 
 // =============== GET FORM INPUT ======================
 
-// Select the date time input form
-var dtForm = d3.select("#datetime");
-
 // id array of all input boxes
 var idArr = {
     datetime : "#datetime",
@@ -93,7 +90,6 @@ var idArr = {
     country : "#country",
     shape : "#shape"
 };
-
 
 // loop and get a object of filtering parameters input by user
 var inpVal;  // each input from the form

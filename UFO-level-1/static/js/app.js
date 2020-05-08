@@ -82,9 +82,12 @@ function makeTable (tblData) {
 makeTable(events)
 
 
+var dateInput;
 
 function exeFilter() {
-   
+    // make sure everytime button is click, filter start fresh
+    dateInput = ""
+
     // Prevent the page from refreshing
     d3.event.preventDefault();
 
@@ -92,7 +95,7 @@ function exeFilter() {
     tbody.html("");
 
     // get the datetime from the user input 
-    var dateInput = d3.select("#datetime").property("value");
+    dateInput = d3.select("#datetime").property("value");
 
     // filter out datetime data based on input
     var filterData = events.filter(event => event.datetime == dateInput);
