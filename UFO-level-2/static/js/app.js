@@ -20,9 +20,15 @@ var inpForm = d3.select("#input-form");
 //filButton.on("click", exeFilter); // filter button is clicked 
 //inpForm.on("submit", exeFilter); // when "enter" key is hit
 
-// event handler for all filters
+// event handler (D3.js script) for all filters
 filButton.on("click", exeMultiFilter); // filter button is clicked 
 inpForm.on("submit", exeMultiFilter); // when "enter" key is hit
+
+// event handler (pure HTML) to change background color of status box
+document.getElementById("filter-btn").onclick = function(){
+    document.getElementById("sitRep").style.color = 'white';
+    document.getElementById("sitRep").style.backgroundColor = 'black';
+}
 
 // ============= DECLARE SOME FUNCTIONS ==============
 // capitalize only initials
@@ -107,7 +113,9 @@ function getAllInpt(){
 
         if (inpVal != ""){
             console.log(`valid input val is ${key, inpVal}`);
-            inpValArr[key] = inpVal; // push the key with value into object
+            // push the key with value into object
+            inpValArr[key] = inpVal.toLowerCase() 
+            console.log("to lower case", inpValArr[key]);
         }
         else
             inpValArr = inpValArr;      
@@ -119,9 +127,9 @@ function filterData(event) {
    return Object.keys(this).every(key => event[key] == this[key]);
 };
 
+var curDate = new Date()
 
-
-let ftrD;
+var ftrD;
 function exeMultiFilter () {
     // Prevent the page from refreshing
     d3.event.preventDefault();
@@ -129,13 +137,40 @@ function exeMultiFilter () {
     // clear old table
     tbody.html("");
     
+    // retrieve new filtering condtitions from user input
     getAllInpt();
 
-
+    // filter out data and make data table
     if (Object.keys(inpValArr).length != 0) { 
         // filter all conditions and return the final data
-        let ftrD = events.filter(filterData, inpValArr);
-        makeTable(ftrD);}
+        ftrD = events.filter(filterData, inpValArr);
+        }
     else
-        makeTable(events);
+        ftrD = events;
+    
+    // make table from retrieved data
+    makeTable(ftrD);
+    
+    // check how many records retrieved
+    var ftrDLen = Object.keys(ftrD).length
+    
+    // let user know when data retrieval & table are finished
+    var status = d3.select("#sitRep").text("STATUS:")
+        .append("p").attr("id", "user-notif")
+        .text("Finished Retrieving : " + ftrDLen + " Records")
+        .append("p").attr("id", "usNoteDate")
+        .text(new Date());
+    
+    // if filter is not in table's data, tell user to check input
+    if (Object.keys(inpValArr).length != 0 && ftrDLen == 0) {
+            status.append("p").attr("id", "noData")
+            .text("No data found, please check filters and try again..."); 
+    }
+
+    // if filter is not input, notify user
+    else if (Object.keys(inpValArr).length == 0 && ftrDLen != 0) {
+                status.append("p").attr("id", "noData")
+                .text("WARNING: No filter applied, please input at least one & try again ..."); 
+    }
 }
+

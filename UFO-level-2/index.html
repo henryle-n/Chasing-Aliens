@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="static/css/style.css">
+  <meta http-equiv='cache-control' content='no-cache'>
+  <meta http-equiv='expires' content='0'>
+  <meta http-equiv='pragma' content='no-cache'>
 </head>
 
 <body>
@@ -27,9 +30,10 @@
     </nav>
     <div class="hero text-center">
       <h1>UFO Tracking</h1>
-      <p class= ""><img class="hero-img" src="static/images/mrAlientPs6.png">Hey There, Let's Chase Some Aliens!</p>
+      <p>Hey There, Let's Chase Some Aliens!</p>
+      <img class="hero-img" src="static/images/mrAlientPs6.png">
     </div>
-    <div class="container">
+    <div class="container-fluid ctn-fl">
       <div class="row margin-top-50">
         <div class="col-md-2">
           <aside class="filters">
@@ -37,60 +41,91 @@
               <div class="panel-heading">Filter Search</div>
               <div class="panel-body">
                 <form id="input-form">
-
-                  
-
                   <div class="form-group">
                     <ul class="list-group" id="filters" type="submit" value="submit">
 
                       <!-- =======FILTER GROUP ======= -->
                       <!-- date -->
-                      <li class="filter list-group-item">
-                        <label for="datetime">Enter a Date</label>
-                        <input class="form-control" id="datetime" type="text" placeholder="01/01/2010">
+                      <li class="user-hint filter list-group-item">
+                        <label for="datetime">Date</label>
+                        <input class="form-control" id="datetime" type="text" placeholder="">
+                        <span class="user-hint-text">
+                          <b>HINT:</b>
+                          <ul>
+                            <li>Input <b>date</b> in <em>"M/D/YYYY format"</em></li>
+                            <li>E.g.: &nbsp;&nbsp;<em><b><span id=datetime>1/1/2010</span></b></em></li>
+                          </ul>
+                        </span>
                       </li>
 
                       <!-- city  -->
-                      <li class="filter list-group-item">
-                        <label for="city">Enter a City</label>
+                      <li class="user-hint filter list-group-item">
+                        <label for="city">City</label>
                         <input class="form-control" id="city" type="text" placeholder="Benton, Bonita, etc.">
+                        <span class="user-hint-text">
+                          <b>HINT:</b>
+                          <ul>
+                            <li>Input <b>city</b> names in either lower or upper case<em></em></li> 
+                            <li>E.g.: &nbsp;&nbsp;<em><b>benton, Bonita, EL CAJON</b>, etc.</em></li> 
+                          </ul>
+                        </span>
                       </li>
 
+
                       <!-- state  -->
-                      <li class="filter list-group-item">
-                        <label for="state">Enter a State</label>
+                      <li class="user-hint filter list-group-item">
+                        <label for="state">State</label>
                         <input class="form-control" id="state" type="text" placeholder="AR, CA, OR, etc.">
+                        <span class="user-hint-text">
+                          <b>HINT:</b>
+                          <ul>
+                            <li>Input <b>state</b> names in either lower or upper case</li> 
+                            <li>Use two letters format</li>
+                            <li>E.g.: &nbsp;&nbsp;<em><b>AR, ar, OR, ky</b>, etc.</em></li>
+                          </ul>
+                        </span>
                       </li>
 
                       <!-- country  -->
-                      <li class="filter list-group-item">
-                        <label for="country">Enter a Country</label>
+                      <li class="user-hint filter list-group-item">
+                        <label for="country">Country</label>
                         <input class="form-control" id="country" type="text" placeholder="US, CA">
+                        <span class="user-hint-text">
+                          <b>HINT:</b>
+                          <ul>
+                            <li>Input <b>country</b> names in either lower or upper case</li> 
+                            <li>Use two letters format</li>
+                            <li>E.g.: &nbsp;&nbsp;<em><b>us, US, Ca, cA</b>, etc.</em></li>
+                          </ul>
+                        </span>
                       </li>
 
                       <!-- shape  -->
-                      <li class="filter list-group-item">
-                        <label for="shape">Enter a Shape</label>
+                      <li class="user-hint filter list-group-item">
+                        <label for="shape">Shape</label>
                         <input class="form-control" id="shape" type="text" placeholder="Changing, Fireball, etc.">
+                        <span class="user-hint-text">
+                          <b>HINT:</b>
+                          <ul>
+                            <li>Input UFO <b>shape</b> in either lower or upper case</li> 
+                            <li>E.g.: &nbsp;&nbsp;<em><b>Light, triangle, cirCLe</b>, etc.</em></li>
+                          </ul>
+                        </span>
                       </li>
-
-
                     </ul>
                   </div>
-
-
-                  <button id="filter-btn" type="button" class="btn btn-primary">Run Filter</button>
+                  <button id="filter-btn" type="button" class="btn btn-info">Run Filter</button>
                 <!-- form with multiple input fields is not supported with "enter-to-submit" action
                   the work around is to create a hidden button to take "enter-to-submit" command and submit the entire form -->
                   <input type="submit" value="submit" style="position: absolute; left: -9999px; 
                     width: -9999px; height: -9999px;" tabindex="-1" />
-                
                 </form>
               </div>
             </div>
           </aside>
         </div>
         <div class="col-md-10">
+          <p id="sitRep">Please input filtering conditions to begin.</p>
           <div id="table-area" class="">
             <table id="ufo-table" class="table table-striped">
               <thead>
@@ -105,7 +140,7 @@
                 </tr>
               </thead>
               <tbody>
-                <!-- this is where to insert table data -->
+                <!-- this is where to insert table data with js-script -->
               </tbody>
             </table>
           </div>
