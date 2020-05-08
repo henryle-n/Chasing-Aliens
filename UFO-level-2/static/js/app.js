@@ -16,10 +16,6 @@ d3.select("#datetime").attr("placeholder", `${fdate} to ${ldate}`);
 var filButton = d3.select("#filter-btn");
 var inpForm = d3.select("#input-form");
 
-// event handlers for only datetime filter
-//filButton.on("click", exeFilter); // filter button is clicked 
-//inpForm.on("submit", exeFilter); // when "enter" key is hit
-
 // event handler (D3.js script) for all filters
 filButton.on("click", exeMultiFilter); // filter button is clicked 
 inpForm.on("submit", exeMultiFilter); // when "enter" key is hit

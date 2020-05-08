@@ -1,6 +1,6 @@
 // ================= DECLARE SOME VARS =====================
 // from data.js
-var tableData = data;
+var events = data;
 
 // access the body of the table 
 var tbody = d3.select("tbody");
@@ -16,10 +16,15 @@ d3.select("#datetime").attr("placeholder", `${fdate} to ${ldate}`);
 var filButton = d3.select("#filter-btn");
 var inpForm = d3.select("#input-form");
 
-// Create event handlers 
+// event handler (D3.js script) for all filters
 filButton.on("click", exeFilter); // filter button is clicked 
 inpForm.on("submit", exeFilter); // when "enter" key is hit
 
+// event handler (pure HTML) to change background color of status box
+document.getElementById("filter-btn").onclick = function(){
+    document.getElementById("sitRep").style.color = 'white';
+    document.getElementById("sitRep").style.backgroundColor = 'black';
+}
 
 // ============= DECLARE SOME FUNCTIONS ==============
 // capitalize only initials
@@ -73,8 +78,7 @@ function makeTable (tblData) {
 
 //============= UPON PAGE LOADING RUN THE DEFAULT TABLE WITH ALL DATA ===========
 
-// assign new var called events from data
-var events = data
+// auto make table upon page loading
 makeTable(events)
 
 
