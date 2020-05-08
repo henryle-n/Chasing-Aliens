@@ -97,10 +97,25 @@ function exeFilter() {
     // get the datetime from the user input 
     dateInput = d3.select("#datetime").property("value");
 
+    // select status update box
+    var status = d3.select("#sitRep")
+
+    // if no date input :: make the original table and post message
+    var filterData;
+    if (dateInput=='' || dateInput==0){
+        filterData = events;    
+    }
+
+    else
     // filter out datetime data based on input
-    var filterData = events.filter(event => event.datetime == dateInput);
+        filterData = events.filter(event => event.datetime == dateInput);
+    
     makeTable(filterData);
 
+    // check how many records retrieved
+    var ftrDLen = Object.keys(filterData).length
+
+    // post status update
     var status = d3.select("#sitRep").text("STATUS:")
     .append("p").attr("id", "user-notif")
     .text("Finished Retrieving : " + ftrDLen + " Records")
@@ -108,16 +123,16 @@ function exeFilter() {
     .text(new Date());
 
     // if filter is not in table's data, tell user to check input
-    if (Object.keys(inpValArr).length != 0 && ftrDLen == 0) {
+    if (ftrDLen == 0) {
             status.append("p").attr("id", "noData")
             .text("No data found, please check filters and try again..."); 
     }
 
     // if filter is not input, notify user
-    else if (Object.keys(inpValArr).length == 0 && ftrDLen != 0) {
+    else if (dateInput=='' || dateInput==0 && ftrDLen != 0) {
                 status.append("p").attr("id", "noData")
                 .text("WARNING: No filter applied, please input at least one & try again ..."); 
-}
+    }
 
 };
 
