@@ -48,6 +48,7 @@ Both levels consist of the same workflow:
 Besides multi-filters, there are also other features to enhance UX/UI:
 * "**HINT**" box appears when user hovers mouse over the input box
 * Input data is not case-sensitive, accepts all lower and/or uppper cases
+* Either hit `Run Filter` button or hit `Enter` key, webpage filter function will run 
 
 <div align="center">
 <img src="UFO-level-1/static/images/hintBox.gif" alt="hintBox" width="80%" height="80%">
@@ -57,6 +58,7 @@ Besides multi-filters, there are also other features to enhance UX/UI:
     * If data was found, or not found, or needs user input
     * Show how many records match user's query conditions
     * What time the data was retrieved
+    * When webpage first loaded, status box shows different message to prompt user for input(s). Upon clicking filter button or hit enter key, the message text color and background will change
 
 <div align="center" class="row3">
   <div class="column3">
