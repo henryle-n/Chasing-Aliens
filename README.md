@@ -8,11 +8,11 @@ There are two different "levels" built for this project:
 
 
 
-<link rel="stylesheet" type="text/css" media="all" href="UFO-level-1/static/css/readmecss.css" />
+<link rel="stylesheet" type="text/css" media="all" href="https://github.com/henryle-n/JavaScript-Challenge/blob/master/UFO-level-1/static/css/readmecss.css"/>
 
 ---
 <div align="center">
-<img src="UFO-level-1/static/images/UFO.gif" atl="Aliens on their way" width="750" height="350" />
+<img src="UFO-level-1/static/images/UFO.gif" atl="Aliens on their way" width="750" height="350"/>
 </div>  
 
 ---
