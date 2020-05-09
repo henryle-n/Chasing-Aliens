@@ -27,7 +27,7 @@ The main directory consists of 3 folders:
 Both Level-1 and Level-2 parts consists of same folders & files, as the following:  
 * **static** 
     * **css** :: style sheet for webpage formating 
-    * **images** :: images shown on webpage and README.md
+    * **images** :: images shown on webpage and `README.md`
     * **js** :: JavaScript to drive filters and make table from filtered array, & the original array of 111 objects
 *  **index.html** :: webpage construction HTML codes 
 
@@ -42,6 +42,14 @@ Both levels consists of the same workflow:
 <a href="https://www.javascripttutorial.net/javascript-array-filter/">**Click here**</a> for detailed explaination of `filter` and `callback` functions 
 
 ## Other features
-Besides 
+Besides multi-filters, there are other features that increase user convenience:
+* "**HINT**" box when hovering mouse over the input box to show user how to input data
+
+
+
+* Data Retrieval `STATUS` Box to inform user:
+    * If data was found, or not found, or needs user input
+    * Show how many records match user's query conditions
+    * What time the data was retrieved
 
 I'm very excited upon finishing up both of the levels as each of them gave me a different approach dealing with the level of complication. For the lev-1, I made it very simple for just getting the date and filtering it directly inside the on-click function. Lev-2 in another hand, is a complete different way of filtering the data. I learned about more or less "advanced" filter function where the 2nd argument can be passed in the filter to create more dynamic filtering based on user inputs. The filter conditions is an object that its length and content are changed based on how many and what conditions are fed into the input boxes from user. It took me two days with different ideas and trials and errors to finally found what works. The "this" keyword worked very well in for this model of filtering.
