@@ -12,7 +12,7 @@ There are two different "levels" built for this project:
 
 ---
 <div align="center">
-<img src="UFO-level-1/static/images/UFO.gif" atl="Aliens on their way" width="50%" height="50%"/>
+<img src="UFO-level-1/static/images/UFO.gif" atl="Aliens on their way" width="750" height="350"/>
 </div>  
 
 ---
@@ -49,7 +49,7 @@ Besides multi-filters, there are also other features to enhance UX/UI:
 * "**HINT**" box appears when user hovers mouse over the input box
 
 <div align="center">
-<img src="UFO-level-1/static/images/hintBox.gif" alt="hintBox" width="500" height="350">
+<img src="UFO-level-1/static/images/hintBox.gif" alt="hintBox" width="60%" height="60%">
 </div><br>
 
 * Data Retrieval `STATUS` Box to inform user:
@@ -59,19 +59,19 @@ Besides multi-filters, there are also other features to enhance UX/UI:
 
 <div align="center" class="row3">
   <div class="column3">
-    <img src="UFO-level-1/static/images/sitRep2.PNG" alt="sitRep2" >
+    <img src="UFO-level-1/static/images/sitRep2.PNG" alt="sitRep2" width="80%" height="80%">
   </div>
 </div>
 
 <div align="center" class="row3">
   <div class="column3">
-    <img src="UFO-level-1/static/images/sitRep0.PNG" alt="sitRep0">
+    <img src="UFO-level-1/static/images/sitRep0.PNG" alt="sitRep0" width="70%" height="70%">
   </div>
 </div>
 
 <div align="center" class="row3">
   <div class="column3">
-    <img src="UFO-level-1/static/images/sitRep1.PNG" alt="sitRep1">
+    <img src="UFO-level-1/static/images/sitRep1.PNG" alt="sitRep1"  width="70%" height="70%">
   </div>
 </div>
 
