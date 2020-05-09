@@ -1,4 +1,4 @@
-# ::: Area 51: Home of Flying Saucers, where else? :::
+# ::: Area 51: Home of Flying Saucers? Where else? :::
 ## Background
 In this project, a JavaScript array of **111** objects were used to construct a web-based app to help users quickly query the data based on different input conditions. 
 
@@ -14,7 +14,7 @@ There are two different websites built for this project.
 
 ---
 ## Tools/ Techniques/ Technologies
-* HTML-5 | CSS-3 | JavaScript/ ECMAScript-5 | D3.js | Bootstrap-4 | Markdown
+* HTML-5 | CSS-3 | JavaScript/ ECMAScript-5 | D3.js | Bootstrap-4 | DOM | Markdown
 * Visual Studio Code Insiders | Live Server (*by R. Dey*) | Instant Markdown (*by D. Bankier*) | Google Chrome ver. 84x
 * MacOS Mojave | Windows 10 Pro, ver. 1909 OS Build 18363.778
 
@@ -33,5 +33,15 @@ Both Level-1 and Level-2 parts consists of same folders & files, as the followin
 
 ## General Workflow
 Both levels consists of the same workflow: 
+* Retrieve user input(s) from front-end HTML by using D3 / HTML DOM
+* Pass condition(s) into back-end JS functions and processes
+* Filter out data and build table of filtered objects
+
+**NOTE:** unlike level-1, level-2 has more sophisticated back-end program to dynamically build an object of filtering conditions and pass them into the second argument of the `Array.filter(callback, contextObject)` function everytime user submits new inputs. This will ensure data is retrieved effectively without refreshing the webpage
+
+<a href="https://www.javascripttutorial.net/javascript-array-filter/">**Click here**</a> for detailed explaination of `filter` and `callback` functions 
+
+## Other features
+Besides 
 
 I'm very excited upon finishing up both of the levels as each of them gave me a different approach dealing with the level of complication. For the lev-1, I made it very simple for just getting the date and filtering it directly inside the on-click function. Lev-2 in another hand, is a complete different way of filtering the data. I learned about more or less "advanced" filter function where the 2nd argument can be passed in the filter to create more dynamic filtering based on user inputs. The filter conditions is an object that its length and content are changed based on how many and what conditions are fed into the input boxes from user. It took me two days with different ideas and trials and errors to finally found what works. The "this" keyword worked very well in for this model of filtering.
