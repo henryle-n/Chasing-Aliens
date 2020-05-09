@@ -65,13 +65,13 @@ Besides multi-filters, there are also other features to enhance UX/UI:
 
 <div align="center" class="row3">
   <div class="column3">
-    <img class="imgc" src="UFO-level-1/static/images/sitRep0.png" alt="sitRep0">
+    <img src="UFO-level-1/static/images/sitRep0.png" alt="sitRep0">
   </div>
 </div>
 
 <div align="center" class="row3">
   <div class="column3">
-    <img src="UFO-level-1/static/images/sitRep1.png" alt="sitRep1" >
+    <img src="UFO-level-1/static/images/sitRep1.PNG" alt="sitRep1">
   </div>
 </div>
 
