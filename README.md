@@ -17,7 +17,7 @@ There are two different "levels" built for this project:
 
 ---
 ## Tools/ Techniques/ Technologies
-* HTML-5 | CSS-3 | JavaScript/ ECMAScript-5 | D3.js | Bootstrap-4 | DOM | Markdown
+* HTML-5 | CSS-3 | JavaScript/ ES-6 | D3.js | Bootstrap-4 | DOM | Markdown
 * Visual Studio Code Insiders | Live Server (*by R. Dey*) | Instant Markdown (*by D. Bankier*) | Google Chrome ver. 84x
 * MacOS Mojave | Windows 10 Pro, ver. 1909 OS Build 18363.778
 
