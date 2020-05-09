@@ -1,8 +1,8 @@
 # ::: Area 51: Home of Flying Saucers? Where else? :::
 ## Background
-In this project, a JavaScript array of **111** objects were used to construct a web-based app to help users quickly query the data based on different input conditions. 
+In this project, a JavaScript array of **111** objects were used to construct a web-based app to help users quickly query the data based on different input conditions and return a data table. 
 
-There are two different websites built for this project.  
+There are two different "levels" built for this project:  
 * Lev-1 consists of a simple "*Date*" filter input. <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-1/">**Click here**</a> for UFO webpage level-1 <br>
 
 * Lev-2 consists of multiple filtering inputs, such as: "*Date*", "*City*", "*State*", "*Country*", "*Shape*" that allows user to further "tune-up" the query. <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-2/">**Click here**</a> for UFO webpage level-2 
@@ -13,7 +13,7 @@ There are two different websites built for this project.
 
 ---
 <div align="center">
-<img src="UFO-level-1/static/images/UFO.gif" atl="Aliens on their way" width="800" height="400" />
+<img src="UFO-level-1/static/images/UFO.gif" atl="Aliens on their way" width="750" height="350" />
 </div>  
 
 ---
@@ -46,26 +46,37 @@ Both levels consists of the same workflow:
 <a href="https://www.javascripttutorial.net/javascript-array-filter/">**Click here**</a> for detailed explaination of `filter` and `callback` functions 
 
 ## Other features
-Besides multi-filters, there are also other features that increase user convenience:
-* "**HINT**" box when hovering mouse over the input box to show user how to input data
+Besides multi-filters, there are also other features to enhance UX/UI:
+* "**HINT**" box appears when user hovers mouse over the input box
 
-
-
-<div class="row">
-  <div class="column">
-    <img src="UFO-level-1/static/images/hintBox0.png" alt="hintBox0" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="UFO-level-1/static/images/hintBox1.png" alt="Forest" style="width:100%">
-  </div>
-</div>
-
-
-
+<div align="center">
+<img src="UFO-level-1/static/images/hintBox.gif" alt="hintBox" style="width:70%">
+</div><br>
 
 * Data Retrieval `STATUS` Box to inform user:
     * If data was found, or not found, or needs user input
     * Show how many records match user's query conditions
     * What time the data was retrieved
 
-I'm very excited upon finishing up both of the levels as each of them gave me a different approach dealing with the level of complication. For the lev-1, I made it very simple for just getting the date and filtering it directly inside the on-click function. Lev-2 in another hand, is a complete different way of filtering the data. I learned about more or less "advanced" filter function where the 2nd argument can be passed in the filter to create more dynamic filtering based on user inputs. The filter conditions is an object that its length and content are changed based on how many and what conditions are fed into the input boxes from user. It took me two days with different ideas and trials and errors to finally found what works. The "this" keyword worked very well in for this model of filtering.
+<div align="center" class="row3">
+  <div class="column3">
+    <img src="UFO-level-1/static/images/sitRep2.png" alt="sitRep1" >
+  </div>
+</div>
+
+<div align="center" class="row3">
+  <div class="column3">
+    <img class="imgc" src="UFO-level-1/static/images/sitRep0.png" alt="sitRep0">
+  </div>
+</div>
+
+<div align="center" class="row3">
+  <div class="column3">
+    <img src="UFO-level-1/static/images/sitRep1.png" alt="sitRep1" >
+  </div>
+</div>
+
+## Summary
+* D3, DOM & JavaScript introduce a whole new level of dynamic webpage and enhance interactive capability
+* Thanks to these back-end drivers, data is filtered correctly based on user input(s). The summary table is then dynamically built and its size adapts to the amount of returned data
+* By passing the 2<sup>nd</sup> argument into the **`Array.filter()`** function and using **`this`** keyword, the webpage now unlocks unlimited filtering scenarios/ results for user as the filters changed in real-time  based on user input
