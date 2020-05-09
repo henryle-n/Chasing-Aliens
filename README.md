@@ -80,5 +80,5 @@ Besides multi-filters, there are also other features to enhance UX/UI:
 
 ## Summary
 * D3, DOM & JavaScript introduce a whole new level of dynamic webpage and enhance interactive capability
-* Thanks to these back-end drivers, data is filtered correctly based on user input(s). The summary table is then dynamically built and its size adapts to the amount of returned data everytime upon new user query request
+* Thanks to these back-end drivers, data is filtered effectively based on user input(s). The summary table is then dynamically built and its size adapts to the updated amount of returned data upon every new user query request
 * By passing the 2<sup>nd</sup> argument into the **`Array.filter()`** function and using **`this`** keyword, the webpage now unlocks unlimited filtering scenarios/ results for user as the filters changed in real-time  based on user input
