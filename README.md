@@ -7,9 +7,13 @@ There are two different websites built for this project.
 
 * Lev-2 consists of multiple filtering inputs, such as: "*Date*", "*City*", "*State*", "*Country*", "*Shape*" that allows user to further "tune-up" the query. <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-2/">**Click here**</a> for UFO webpage level-2 
 
+
+
+<link rel="stylesheet" type="text/css" media="all" href="UFO-level-1/static/css/readmecss.css" />
+
 ---
 <div align="center">
-<img align="center" src="UFO-level-1/static/images/UFO.gif" atl="Aliens on their way" width="800" height="400" />
+<img src="UFO-level-1/static/images/UFO.gif" atl="Aliens on their way" width="800" height="400" />
 </div>  
 
 ---
@@ -42,8 +46,20 @@ Both levels consists of the same workflow:
 <a href="https://www.javascripttutorial.net/javascript-array-filter/">**Click here**</a> for detailed explaination of `filter` and `callback` functions 
 
 ## Other features
-Besides multi-filters, there are other features that increase user convenience:
+Besides multi-filters, there are also other features that increase user convenience:
 * "**HINT**" box when hovering mouse over the input box to show user how to input data
+
+
+
+<div class="row">
+  <div class="column">
+    <img src="UFO-level-1/static/images/hintBox0.png" alt="hintBox0" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="UFO-level-1/static/images/hintBox1.png" alt="Forest" style="width:100%">
+  </div>
+</div>
+
 
 
 
