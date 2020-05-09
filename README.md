@@ -1,6 +1,6 @@
 # ::: Area 51: Home of Flying Saucers? Where else? :::
 ## Background
-In this project, a JavaScript array of **111** objects were used to construct a web-based app to help users quickly query the data based on different input conditions and return a data table. This table size (rows x columns) is changed dynamically based on how much data is retrieved.
+In this project, a JavaScript array of **111** objects were used to construct a web-based app to help users quickly query the data about UFO based on different input conditions and return a data table. This table size (rows x columns) is changed dynamically based on how much data is retrieved.
 
 There are two different "levels" built for this project:  
 * Lev-1 consists of a simple "*Date*" filter input. <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-1/">**Click here**</a> for UFO webpage level-1 demo
@@ -40,9 +40,9 @@ Both levels consist of the same workflow:
 * Pass query condition(s) into back-end JS functions and processes
 * Filter out relevant data and build table of filtered objects
 
-**NOTE:** unlike level-1, level-2 has more sophisticated back-end program to dynamically build an object of filtering conditions and pass them into the second argument of the `Array.filter(callback, contextObject)` function everytime user submits new inputs. This will ensure data is retrieved effectively without refreshing the webpage
+**NOTE:** unlike level-1, level-2 has more sophisticated back-end program to dynamically build an object of user defined filtering conditions and pass them into the second argument of the **`Array.filter(callback, contextObject)`** function everytime user submits new inputs. This will ensure data is retrieved effectively without the need of refreshing webpage
 
-<a href="https://www.javascripttutorial.net/javascript-array-filter/">**Click here**</a> for detailed explaination of `filter` and `callback` functions 
+<a href="https://www.javascripttutorial.net/javascript-array-filter/">**Click here**</a> for detailed explaination of **`filter`** and **`callback`** functions 
 
 ## Other features
 Besides multi-filters, there are also other features to enhance UX/UI:
