@@ -49,7 +49,7 @@ Besides multi-filters, there are also other features to enhance UX/UI:
 * "**HINT**" box appears when user hovers mouse over the input box
 
 <div align="center">
-<img src="UFO-level-1/static/images/hintBox.gif" alt="hintBox" style="width:70%">
+<img src="UFO-level-1/static/images/hintBox.gif" alt="hintBox" style="width:50%">
 </div><br>
 
 * Data Retrieval `STATUS` Box to inform user:
