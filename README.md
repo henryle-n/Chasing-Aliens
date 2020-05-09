@@ -14,7 +14,24 @@ There are two different websites built for this project.
 
 ---
 ## Tools/ Techniques/ Technologies
-* HTML-5 | CSS-3 | JavaScript/ ECMAScript-5 | Bootstrap-4 | Markdown
-* Live Server (*by R. Dey*) | Visual Studio Code Insiders | Instant Markdown (*by D. Bankier*) 
+* HTML-5 | CSS-3 | JavaScript/ ECMAScript-5 | D3.js | Bootstrap-4 | Markdown
+* Visual Studio Code Insiders | Live Server (*by R. Dey*) | Instant Markdown (*by D. Bankier*) | Google Chrome ver. 84x
+* MacOS Mojave | Windows 10 Pro, ver. 1909 OS Build 18363.778
+
+## Table of Contents
+The main directory consists of 3 folders:
+* **InDev** :: files for future development
+* **UFO-level-1** :: contains apps and scripts of single filter
+* **UFO-level-1** :: contains apps and scripts of multiple filters
+
+Both Level-1 and Level-2 parts consists of same folders & files, as the following:  
+* **static** 
+    * **css** :: style sheet for webpage formating 
+    * **images** :: images shown on webpage and README.md
+    * **js** :: JavaScript to drive filters and make table from filtered array, & the original array of 111 objects
+*  **index.html** :: webpage construction HTML codes 
+
+## General Workflow
+Both levels consists of the same workflow: 
 
 I'm very excited upon finishing up both of the levels as each of them gave me a different approach dealing with the level of complication. For the lev-1, I made it very simple for just getting the date and filtering it directly inside the on-click function. Lev-2 in another hand, is a complete different way of filtering the data. I learned about more or less "advanced" filter function where the 2nd argument can be passed in the filter to create more dynamic filtering based on user inputs. The filter conditions is an object that its length and content are changed based on how many and what conditions are fed into the input boxes from user. It took me two days with different ideas and trials and errors to finally found what works. The "this" keyword worked very well in for this model of filtering.
