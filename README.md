@@ -59,7 +59,7 @@ Besides multi-filters, there are also other features to enhance UX/UI:
 
 <div align="center" class="row3">
   <div class="column3">
-    <img src="UFO-level-1/static/images/sitRep2.png" alt="sitRep1" >
+    <img src="https://github.com/henryle-n/JavaScript-Challenge/blob/master/UFO-level-1/static/images/sitRep2.PNG" alt="sitRep2" >
   </div>
 </div>
 
