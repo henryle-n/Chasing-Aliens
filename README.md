@@ -4,7 +4,7 @@ In this project, a JavaScript array of **111** objects were used to construct a 
 
 There are two different "levels" built for this project:  
 * Lev-1 consists of a simple "*Date*" filter input. <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-1/">**Click here**</a> for UFO webpage level-1 demo
-* Lev-2 consists of multiple filtering inputs, such as: "*Date*", "*City*", "*State*", "*Country*", "*Shape*" that allows user to further "tune-up" the query. <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-2.B/">**Click here**</a> for UFO webpage level-2 demo
+* Lev-2 consists of multiple filtering inputs, such as: "*Date*", "*City*", "*State*", "*Country*", "*Shape*" that allows user to further "tune-up" the query. <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-2.A/">**Click here**</a> for UFO webpage level-2 demo
 
 
 
