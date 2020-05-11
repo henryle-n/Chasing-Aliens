@@ -98,16 +98,12 @@ var inpValArr = {};  // create an object to hold the key-value pairs
 function getAllInpt(){
     inpValArr = {};
     Object.entries(idArr).forEach(([key, value]) => {
-        console.log(value);
         // get the user input value from the UI form 
         inpVal = d3.select(value).property("value"); //getInput(value);
-        console.log(`getting input val for ${key, value}:${inpVal}`);
 
         if (inpVal != ""){
-            console.log(`valid input val is ${key, inpVal}`);
             // push the key with value into object
             inpValArr[key] = inpVal.toLowerCase() 
-            console.log("to lower case", inpValArr[key]);
         }
         else
             inpValArr = inpValArr;      
@@ -165,4 +161,3 @@ function exeMultiFilter () {
                 .text("WARNING: No filter applied, please input at least one & try again ..."); 
     }
 }
-

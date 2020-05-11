@@ -305,6 +305,7 @@ label {
     font-weight: bold;
     text-align: center;
     content: attr(data-th);
+    background-color: lavender;
   }
 
   .hero h1 {
