@@ -49,6 +49,12 @@ Both levels consist of the same workflow:
 
 <a href="https://www.javascripttutorial.net/javascript-array-filter/">**Click here**</a> for detailed explaination of **`filter`** and **`callback`** functions 
 
+## Summary
+* D3, DOM & JavaScript introduce a whole new level of dynamic webpage and enhance interactive capability
+* Thanks to these back-end drivers, data is filtered effectively based on user input(s). The summary table is then dynamically built and its size adapts to the updated amount of returned data upon every new user query request
+* In Lev-2.A, by passing the 2<sup>nd</sup> argument into the **`Array.filter()`** function and using **`this`** keyword, the webpage now unlocks unlimited filtering scenarios/ results for user as the filters changed in real-time  based on user input
+* In Lev-2.B, a more efficient loop is built to loop through each user input and filter out data. The loop will end when there is no more user input found. In other word, the data is filter at each condition as soon as it is created, different from Lev-2.A in the way that all of its filters were created first and then filter. Lev-2.B is more like a synchronous process that is more effient and eliminate the first loop when the filter was first built
+
 ## Other features
 Besides multi-filters, there are also other features to enhance UX/UI:
 * "**HINT**" box appears when user hovers mouse over the input box
@@ -83,8 +89,4 @@ Besides multi-filters, there are also other features to enhance UX/UI:
   </div>
 </div>
 
-## Summary
-* D3, DOM & JavaScript introduce a whole new level of dynamic webpage and enhance interactive capability
-* Thanks to these back-end drivers, data is filtered effectively based on user input(s). The summary table is then dynamically built and its size adapts to the updated amount of returned data upon every new user query request
-* In Lev-2.A, by passing the 2<sup>nd</sup> argument into the **`Array.filter()`** function and using **`this`** keyword, the webpage now unlocks unlimited filtering scenarios/ results for user as the filters changed in real-time  based on user input
-* In Lev-2.B, a more efficient loop is built to loop through each user input and filter out data. The loop will end when there is no more user input found. In other word, the data is filter at each condition as soon as it is created, different from Lev-2.A in the way that all of its filters were created first and then filter. Lev-2.B is more like a synchronous process that is more effient and eliminate the first loop when the filter was first built
+
