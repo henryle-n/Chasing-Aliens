@@ -3,8 +3,8 @@
 In this project, a JavaScript array of **111** objects were used to construct a web-based app to help users quickly query the data about UFO based on different input conditions and return a data table. This table size (rows x columns) is changed dynamically based on how much data is retrieved.
 
 There are two different "levels" built for this project:  
-* Lev-1 consists of a simple "*Date*" filter input. 
-      * <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-1/">**Click here**</a> for UFO webpage level-1 demo   
+* Lev-1 consists of a simple "*Date*" filter input.  
+     * <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-1/">**Click here**</a> for UFO webpage level-1 demo   
       
 * Lev-2 consists of multiple filtering inputs, such as: "*Date*", "*City*", "*State*", "*Country*", "*Shape*" that allows user to further "tune-up" the query.  
     * <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-2.A/">**Click here**</a> for UFO webpage level-2 demo
