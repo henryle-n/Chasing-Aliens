@@ -6,6 +6,7 @@ There are two different "levels" built for this project:
 * Lev-1 consists of a simple "*Date*" filter input. <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-1/">**Click here**</a> for UFO webpage level-1 demo
 * Lev-2 consists of multiple filtering inputs, such as: "*Date*", "*City*", "*State*", "*Country*", "*Shape*" that allows user to further "tune-up" the query. <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-2.A/">**Click here**</a> for UFO webpage level-2 demo
 
+**NOTE:** There are two "sub-branches" for level-2 labeled: "*2A*", "*2B*". The difference is that *2B* is an improved version with more efficient coding techniques compare to *2A*. Everything else remains the same.
 
 
 <link rel="stylesheet" type="text/css" media="all" href="https://github.com/henryle-n/JavaScript-Challenge/blob/master/UFO-level-1/static/css/readmecss.css"/>
@@ -25,19 +26,20 @@ There are two different "levels" built for this project:
 The main directory consists of 3 folders:
 * **InDev** :: files for future development
 * **UFO-level-1** :: contains apps and scripts of single filter (by '*Date*')
-* **UFO-level-1** :: contains apps and scripts of multiple filters
+* **UFO-level-2.A** :: contains apps and scripts of multiple filters
+* **UFO-level-2.B** :: improved version of JS, everything else is same as *2.A*
 
 Both Level-1 and Level-2 parts consists of same folders & files, as the following:  
 * **static** 
     * **css** :: style sheet for webpage formating 
     * **images** :: images shown on webpage and `README.md`
-    * **js** :: JavaScript to drive filters and make table from filtered array, & the original array of 111 objects
-*  **index.html** :: webpage construction HTML codes 
+    * **js** :: JavaScript to drive filters and make table from the filtered array, & the original array of 111 objects
+*  **index.html** :: webpage HTML codes 
 
 ## General Workflow
 Both levels consist of the same workflow: 
 * Retrieve user input(s) from front-end HTML by using D3 / HTML DOM
-* Pass query condition(s) into back-end JS functions and processes
+* Pass query condition(s) into back-end for JS functions and processes
 * Filter out relevant data and build table of filtered objects
 
 **NOTE:** unlike level-1, level-2 has more sophisticated back-end program to dynamically build an object of user defined filtering conditions and pass them into the second argument of the **`Array.filter(callback, contextObject)`** function everytime user submits new inputs. This will ensure data is retrieved effectively without the need of refreshing webpage
