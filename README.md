@@ -9,7 +9,7 @@ There are two different "levels" built for this project:
 * Lev-2 consists of multiple filtering inputs, such as: "*Date*", "*City*", "*State*", "*Country*", "*Shape*" that allows user to further "tune-up" the query.  
     * <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-2.A/">**Click here**</a> for UFO webpage level-2 demo
 
-**NOTE:** There are two "sub-branches" for level-2 labeled: "*2A*", "*2B*". The difference is that *2B* is an improved version with more efficient coding techniques compare to *2A*. Everything else remains the same.
+**NOTE:** There are two "sub-branches" for level-2 labeled: "*2A*", "*2B*". The difference is that *2B* is an improved version with more efficient coding techniques/ workflow compare to *2A*. Everything else remains the same.
 
 
 <link rel="stylesheet" type="text/css" media="all" href="https://github.com/henryle-n/JavaScript-Challenge/blob/master/UFO-level-1/static/css/readmecss.css"/>
@@ -86,4 +86,5 @@ Besides multi-filters, there are also other features to enhance UX/UI:
 ## Summary
 * D3, DOM & JavaScript introduce a whole new level of dynamic webpage and enhance interactive capability
 * Thanks to these back-end drivers, data is filtered effectively based on user input(s). The summary table is then dynamically built and its size adapts to the updated amount of returned data upon every new user query request
-* By passing the 2<sup>nd</sup> argument into the **`Array.filter()`** function and using **`this`** keyword, the webpage now unlocks unlimited filtering scenarios/ results for user as the filters changed in real-time  based on user input
+* In Lev-2.A, by passing the 2<sup>nd</sup> argument into the **`Array.filter()`** function and using **`this`** keyword, the webpage now unlocks unlimited filtering scenarios/ results for user as the filters changed in real-time  based on user input
+* In Lev-2.B, a more efficient loop is built to loop through each user input and filter out data. The loop will end when there is no more user input found. In other word, the data is filter at each condition as soon as it is created, different from Lev-2.A in the way that all of its filters were created first and then filter. Lev-2.B is more like a synchronous process that is more effient and eliminate the first loop when the filter was first built
