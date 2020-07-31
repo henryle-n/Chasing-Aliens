@@ -58,27 +58,27 @@ Both levels consist of the same workflow:
 * Then, this input object is passed into the second argument of **`Array.filter(callback, contextObject)`** function everytime user submits new inputs. This will ensure data is retrieved effectively without the need of refreshing webpage.
 * The key of lev-2 success is the `contextObject` of this filter function. <a href="https://www.javascripttutorial.net/javascript-array-filter/">**Click here**</a> for detailed explaination of **`filter`** and **`callback`** functions. 
 
-## Summary
-* D3, DOM & JavaScript introduce a whole new level of dynamic webpage and enhance interactive capability
-* Thanks to these back-end drivers, data is filtered effectively based on user input(s). The summary table is then dynamically built and its size adapts to the updated amount of returned data upon every new user query request
-* In Lev-2.A, by passing the 2<sup>nd</sup> argument into the **`Array.filter()`** function and using **`this`** keyword, the webpage now unlocks unlimited filtering scenarios/ results for user as the filters changed in real-time  based on user input
-* In Lev-2.B, a more efficient loop is built to loop through each user input and filter out data. The loop will end when there is no more user input found. In other word, the data is filter at each condition as soon as it is created, different from Lev-2.A in the way that all of its filters were created first and then filter. Lev-2.B is more like a synchronous process that is more effient and eliminate the first loop when the filter was first built
+## 4. Summary
+* DOM with D3.js introduces a whole new level of dynamic webpage, and thus enhances interactive capability. 
+* Thanks to these back-end drivers, data is filtered effectively based on user input(s). The summary table is then dynamically built and its size adapts to amount of returned data upon every new user query conditions.
+* In Lev-2.A, by introducing the 2<sup>nd</sup> argument into the **`Array.filter()`** function and using **`this`** keyword, the website now unlocks unlimited filtering scenarios/ results for users.
+* In Lev-2.B, a more efficient loop is built to simultaneously loop through each user input and filter out data. The loop will end when there is no more condition found. In other word, data is filtered at each condition as soon as this condition is parsed. Lev-2.B is different from Lev-2.A in the way that all of lev-2.A filters were created first and then filter. Lev-2.B is more like a synchronous process where filter and retrieved data are built at the same time. Thus, eliminating the first loop where the filter object was built as in the case of lev-2.A.
 
-## Other features
+## 5. Other features
 Besides multi-filters, there are also other features to enhance UX/UI:
-* "**HINT**" box appears when user hovers mouse over the input box
-* Input data is not case-sensitive, accepts all lower and/or uppper cases
-* Either hit `Run Filter` button or hit `Enter` key, webpage filter function will run 
+* "**HINT**" box appears when users hover mouse over the input box.
+* Input data is not case-sensitive, accepts all lower and/or uppper cases.
+* Either hit `Run Filter` button or hit `Enter` key, webpage filter function will run. 
 
 <div align="center">
 <img src="UFO-level-1/static/images/hintBox.gif" alt="hintBox" width="80%" height="80%">
 </div><br>
 
-* Data Retrieval `STATUS` Box to inform user:
-    * If data was found, or not found, or needs user input
-    * Show how many records match user's query conditions
-    * What time the data was retrieved
-    * When webpage first loaded, status box shows different message to prompt user for input(s). Upon clicking filter button or hit enter key, the message text color and background will change
+* Data Retrieval `STATUS` Box to inform users:
+    * If data was found, or not found, or needs user input.
+    * Show how many records match user's query conditions.
+    * What time the data was retrieved.
+    * When webpage first loaded, status box shows different message to prompt for input(s). Upon clicking filter button or hit enter key, the message text color and background will change.
 
 <div align="center" class="row3">
   <div class="column3">
