@@ -161,4 +161,3 @@ function exeMultiFilter () {
                 .text("WARNING: No filter applied, please input at least one & try again ..."); 
     }
 }
-

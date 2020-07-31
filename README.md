@@ -1,15 +1,17 @@
 # ::: Area 51: Home of Flying Saucers? Where else? :::
-## Background
-In this project, a JavaScript array of **111** objects were used to construct a web-based app to help users quickly query the data about UFO based on different input conditions and return a data table. This table size (rows x columns) is changed dynamically based on how much data is retrieved.
+## 1. Background
+Unidentified Flying Objects, or UFOs are one of the most controversial topics at all time. Folks that believe Aliens are real think UFOs are their spaceships; yet, folks that don't believe said it may be just a weird bird or an military secret airplane, or simply just something up in the sky that is too far away to recognize.
+
+Interestingly enough, in this project, the dataset is a JavaScript array of **111** objects. The goal is to build a interative web application to help users (UFO Trackers) quickly query the data related to UFO sightings based on different input conditions and then quickly return a data table. The table size (rows x columns) is changed dynamically based on the amount of retrieved data.
 
 There are two different "levels" built for this project:  
 * Lev-1 consists of a simple "*Date*" filter input.  
-     * <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-1/">**Click here**</a> for UFO webpage level-1 demo   
+     * <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-1/">**Click here**</a> for UFO webpage level-1 demo.   
       
 * Lev-2 consists of multiple filtering inputs, such as: "*Date*", "*City*", "*State*", "*Country*", "*Shape*" that allows user to further "tune-up" the query.  
-    * <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-2.A/">**Click here**</a> for UFO webpage level-2 demo
-
-**NOTE:** There are two "sub-branches" for level-2 labeled: "*2A*", "*2B*". The difference is that *2B* is an improved version with more efficient coding techniques/ workflow compare to *2A*. Everything else remains the same.
+    * <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-2.A/">**Click here**</a> for UFO webpage level-2 demo.
+    * **NOTE:** There are two "sub-branches" for level-2 labeled: "*2A*", "*2B*". The difference is that *2B* is an improved version with more efficient coding techniques/ workflow compare to *2A*. Everything else remains the same.
+    * Both versions of this level 2 are purposely uploaded on GitHub to show fellow programmers that there are many ways to accomplish the same thing. However, one way could be more efficient than others.
 
 
 <link rel="stylesheet" type="text/css" media="all" href="https://github.com/henryle-n/JavaScript-Challenge/blob/master/UFO-level-1/static/css/readmecss.css"/>
@@ -20,34 +22,41 @@ There are two different "levels" built for this project:
 </div>  
 
 ---
-## Tools/ Techniques/ Technologies
-* HTML-5 | CSS-3 | JavaScript/ ES-6 | D3.js | Bootstrap-4 | DOM | Markdown
-* Visual Studio Code Insiders | Live Server (*by R. Dey*) | Instant Markdown (*by D. Bankier*) | Google Chrome ver. 84x
-* MacOS Mojave | Windows 10 Pro, ver. 1909 OS Build 18363.778
+## 2. Tools/ Techniques/ Technologies
+* Lauguages:
+  * HTML-5 | CSS-3 | JavaScript (ES-6) | Markdown
+* Web Developement Libraries:
+  * D3.js (DOM) | Bootstrap-4  
+* Applications:
+  * Visual Studio Code | Live Server (*by R. Dey*) | Instant Markdown (*by D. Bankier*) | Google Chrome ver. 84x
+* Operating Systems:
+  * Windows 10 Pro (ver. 1909) | MacOS Mojave
 
-## Table of Contents
+## 3. Table of Contents
 The main directory consists of 3 folders:
-* **InDev** :: files for future development
 * **UFO-level-1** :: contains apps and scripts of single filter (by '*Date*')
 * **UFO-level-2.A** :: contains apps and scripts of multiple filters
 * **UFO-level-2.B** :: improved version of JS, everything else is same as *2.A*
 
 Both Level-1 and Level-2 parts consists of same folders & files, as the following:  
 * **static** 
-    * **css** :: style sheet for webpage formating 
-    * **images** :: images shown on webpage and `README.md`
-    * **js** :: JavaScript to drive filters and make table from the filtered array, & the original array of 111 objects
-*  **index.html** :: webpage HTML codes 
+    * **css** :: style sheet for formating homepage. 
+    * **images** :: images shown on webpage and `README.md`.
+    * **js** :: 
+      *  JS array of 111 objects
+      * JS codes to drive filters and make table from the filtered data.
+*  **index.html** :: homepage of this project.
 
-## General Workflow
+## 3. General Workflow
 Both levels consist of the same workflow: 
-* Retrieve user input(s) from front-end HTML by using D3 / HTML DOM
-* Pass query condition(s) into back-end for JS functions and processes
-* Filter out relevant data and build table of filtered objects
+* Fetch user input(s) from front-end homepage by using D3.js DOM.
+* Pass query condition(s) to JS functions and processes.
+* Filter out relevant data and build table, using same D3.js DOM.
 
-**NOTE:** unlike level-1, level-2 has more sophisticated back-end program to dynamically build an object of user defined filtering conditions and pass them into the second argument of the **`Array.filter(callback, contextObject)`** function everytime user submits new inputs. This will ensure data is retrieved effectively without the need of refreshing webpage
-
-<a href="https://www.javascripttutorial.net/javascript-array-filter/">**Click here**</a> for detailed explaination of **`filter`** and **`callback`** functions 
+**NOTE:** unlike level-1, level-2 JS is a bit more sophisticated.
+* First, JS dynamically builds an object of user input filters.
+* Then, this input object is passed into the second argument of **`Array.filter(callback, contextObject)`** function everytime user submits new inputs. This will ensure data is retrieved effectively without the need of refreshing webpage.
+* The key of lev-2 success is the `contextObject` of this filter function. <a href="https://www.javascripttutorial.net/javascript-array-filter/">**Click here**</a> for detailed explaination of **`filter`** and **`callback`** functions. 
 
 ## Summary
 * D3, DOM & JavaScript introduce a whole new level of dynamic webpage and enhance interactive capability
