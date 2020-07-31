@@ -1,8 +1,8 @@
 # ::: Area 51: Home of Flying Saucers? Where else? :::
 ## 1. Background
-Unidentified Flying Objects, or UFOs are one of the most controversial topics at all time. Folks that believe Aliens are real think UFOs are their spaceships; yet, folks that don't believe said it may be just a weird bird or an military secret airplane, or simply just something up in the sky that is too far away to recognize.
+Unidentified Flying Objects, or UFOs are one of the most controversial topics at all time. Folks that believe Aliens are real think UFOs are their spaceships. Yet, folks that don't believe said it could be just a weird bird or a secret military airplane, or simply just something up in the sky that is too far away to recognize (could be a burning asteroid trying to enter our planet Earth!).
 
-Interestingly enough, in this project, the dataset is a JavaScript array of **111** objects. The goal is to build a interative web application to help users (UFO Trackers) quickly query the data related to UFO sightings based on different input conditions and then quickly return a data table. The table size (rows x columns) is changed dynamically based on the amount of retrieved data.
+Interestingly enough in this project, the dataset is a JavaScript array of **111** objects related to UFO sightings that folks reported at multiple locations. The goal is to build an interative web application to help users quickly query the data based on different input conditions and then return a data table. Size of this table (rows x columns) is changed dynamically based on the amount of retrieved data.
 
 
 ---
@@ -37,16 +37,16 @@ There are two different "levels" built for this project:
 
 ## 4. Table of Contents
 The main directory consists of 3 folders:
-* **UFO-level-1** :: contains apps and scripts of single filter (by '*Date*')
-* **UFO-level-2.A** :: contains apps and scripts of multiple filters
-* **UFO-level-2.B** :: improved version of JS, everything else is same as *2.A*
+* **UFO-level-1** :: contains apps and scripts of single filter (by '*Date*').
+* **UFO-level-2.A** :: contains apps and scripts of multiple filters.
+* **UFO-level-2.B** :: improved version of JS, everything else is same as *2.A*.
 
 Both Level-1 and Level-2 parts consists of same folders & files, as the following:  
 * **static** 
     * **css** :: style sheet for formating homepage. 
     * **images** :: images shown on webpage and `README.md`.
     * **js** :: 
-      *  JS array of 111 objects
+      *  JS array of 111 objects.
       * JS codes to drive filters and make table from the filtered data.
 *  **index.html** :: homepage of this project.
 
