@@ -112,4 +112,4 @@ Besides multi-filters, there are also other features to enhance UX/UI:
   * Navigate to the `index.html` folder, open GitBash or CMD or Windows Terminal here.
   * `python -m http.server 8000` : this would run the mini-python server on port 8000. More detail on other features of this python server is <a href="https://docs.python.org/3/library/http.server.html">here</a>.
 
-  **NOTE:** don't use either of these mini-servers for production. They are meant for testing or during development only. _Node_ wasn't used as the project runs fine with the mentioned mini-servers.
+  **NOTE:** don't use either of these mini-servers for production. They are meant for testing or during development only.
