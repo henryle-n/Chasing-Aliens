@@ -86,7 +86,7 @@ var dateInput;
 var filterData
 var text;
 function exeFilter() {
-    // make sure everytime button is click, filter start fresh
+    // make sure everytime button is click, filter starts fresh
     // all objects reset back to empty
     dateInput = ""
     tbody.html("");
