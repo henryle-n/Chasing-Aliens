@@ -43,8 +43,6 @@ function init_cap(str) {
 // make table from array of objects
 function makeTable (tblData) {
     tblData.forEach(obj => {
-        // print out the retrieve object
-        // console.log("making table...", obj); 
         
         // add row for each object in the array
         var row = tbody.append("tr");
@@ -89,9 +87,6 @@ var idObj = {
 
 // loop and get a object of filtering parameters input by user
 var inpVal;  // each input from the form
-// var inpValObj = {};  // create an object to hold the key-value pairs
-// ---------------------------- //
-
 function filterData(event) {
    return Object.keys(this).every(key => event[key] == this[key]);
 };
