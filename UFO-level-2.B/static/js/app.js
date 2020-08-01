@@ -101,7 +101,7 @@ function exeMultiFilter () {
     // clear old table
     tbody.html("");
     
-    // ######### this following code blocks were commented out and purposely left here ###########
+    // ######### this following code block were commented out and purposely left here ###########
     // ######### to show the difference between lev-2.A and lev-2.B: one loop less - more efficient ##########
     // inpValObj = {};     // retrieve new filtering condtitions from user input
     // Object.entries(idArr).forEach(([key, value]) => {
