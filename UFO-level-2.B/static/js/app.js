@@ -101,8 +101,9 @@ function exeMultiFilter () {
     // clear old table
     tbody.html("");
     
-    // retrieve new filtering condtitions from user input
-    // inpValObj = {};
+    // ######### this following code blocks were commented out and purposely left here ###########
+    // ######### to show the difference between lev-2.A and lev-2.B: one loop less - more efficient ##########
+    // inpValObj = {};     // retrieve new filtering condtitions from user input
     // Object.entries(idArr).forEach(([key, value]) => {
     //     // get the user input value from the UI form 
     //     inpVal = d3.select(value).property("value"); //getInput(value);
@@ -118,7 +119,9 @@ function exeMultiFilter () {
     //    // filter all conditions and return the final data
     //    ftrD = events.filter(filterData, inpValObj);
     // }
-   
+    // ####################################################
+
+    // looping thru each input condition and immediately filter data based on that input condition
     ftrD = data;
     Object.entries(idObj).forEach(([key, value]) => {
         // get the user input value from the UI form 
