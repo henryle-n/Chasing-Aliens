@@ -24,10 +24,10 @@ Interestingly enough in this project, the dataset is a JavaScript array of **111
 ## 3. Website Deployment
 There are two different "levels" built for this project:  
 * Lev-1 consists of a simple "*Date*" filter input.  
-     * <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-1/">**Click here**</a> for UFO webpage level-1 demo.   
+     * <a href="https://henryle-n.github.io/Chasing-Aliens/UFO-level-1/">**Click here**</a> for UFO webpage level-1 demo.   
       
 * Lev-2 consists of multiple filtering inputs, such as: "*Date*", "*City*", "*State*", "*Country*", "*Shape*" that allows user to further "tune-up" the query.  
-    * <a href="https://henryle-n.github.io/JavaScript-Challenge/UFO-level-2.A/">**Click here**</a> for UFO webpage level-2 demo.
+    * <a href="https://henryle-n.github.io/Chasing-Aliens/UFO-level-2.A/">**Click here**</a> for UFO webpage level-2 demo.
     * **NOTE:** There are two "sub-branches" for level-2 labeled: "*2A*", "*2B*". The difference is that *2B* is an improved version with more efficient coding techniques/ workflow compare to *2A*. Everything else remains the same.
     * Both versions of this level 2 are purposely uploaded on GitHub to show fellow programmers that there are many ways to accomplish the same thing. However, one way could be more efficient than others.
 
