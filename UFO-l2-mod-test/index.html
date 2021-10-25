@@ -159,6 +159,7 @@
   <script>
     let userNum = 4;
     let myInput = accountIDInfo[userNum - 1];
+    console.log(`my Input  = ${myInput}`);
     (function (apiKey) {
       (function (p, e, n, d, o) {
         var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = o._q || [];
@@ -171,7 +172,6 @@
 
       // Call this whenever information about your visitors becomes available
       // Please use Strings, Numbers, or Bools for value types.
-      console.log('this is my input :: ', myInput);
       pendo.initialize(myInput);
     })('7b73df87-3c16-41c5-5fa9-39fcd1b52320');
   </script>
