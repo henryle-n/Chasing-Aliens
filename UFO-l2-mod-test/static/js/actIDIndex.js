@@ -99,7 +99,9 @@ var accountIDInfo = [{
         visitor: {
             id: 'VIS-TEST-USER-ID40009' // Required if user is logged in
         },
-        account: {}
+        account: {
+            id: 'ACCT-UNIQUE-ID40009'
+        }
     }
 ]
 // export const nameID = accountIDInfo;
