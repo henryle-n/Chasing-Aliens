@@ -8,8 +8,7 @@ var accountIDInfo = [{
                 ,
             role: "User Role ID10009" // Optional
                 ,
-            additionalVField: "custom added to test VIS 1"
-            ,
+            additionalVField: "custom added to test VIS 1",
             tag: "tag for index 10009"
         },
         account: {
@@ -27,8 +26,7 @@ var accountIDInfo = [{
                 ,
             creationDate: `${new Date(2020, 0, 10)}` // Optional
                 ,
-            additionalAField: "custom added to test ACCT 1"
-            ,
+            additionalAField: "custom added to test ACCT 1",
             tag: "tag for index 10009"
         }
 
@@ -43,8 +41,7 @@ var accountIDInfo = [{
                 ,
             role: "User Role ID20009" // Optional
                 ,
-            additionalVField: "custom added to test VIS 2"
-            ,
+            additionalVField: "custom added to test VIS 2",
             tag: "tag for index 20009"
         },
         account: {
@@ -62,8 +59,7 @@ var accountIDInfo = [{
                 ,
             creationDate: `${new Date(2020, 0, 20)}` // Optional
                 ,
-            additionalAField: "custom added to test ACCT 2"
-            ,
+            additionalAField: "custom added to test ACCT 2",
             tag: "tag for index 20009"
         }
     },
@@ -77,8 +73,7 @@ var accountIDInfo = [{
                 ,
             role: "User Role ID30009" // Optional
                 ,
-            additionalVField: "custom added to test VIS 3"
-            ,
+            additionalVField: "custom added to test VIS 3",
             tag: "tag for index 30009"
         },
         account: {
@@ -96,8 +91,7 @@ var accountIDInfo = [{
                 ,
             creationDate: `${new Date(2020, 0, 30)}` // Optional
                 ,
-            additionalAField: "custom added to test ACCT 3"
-                ,
+            additionalAField: "custom added to test ACCT 3",
             tag: "tag for index 30009"
         }
     }
