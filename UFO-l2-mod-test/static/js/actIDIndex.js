@@ -102,5 +102,4 @@ var accountIDInfo = [{
         account: {}
     }
 ]
-console.log(accountIDInfo[0]);
 // export const nameID = accountIDInfo;
