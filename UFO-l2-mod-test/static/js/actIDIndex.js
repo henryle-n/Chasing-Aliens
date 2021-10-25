@@ -95,6 +95,38 @@ var accountIDInfo = [{
             tag: "tag for index 30009"
         }
     }
+    ,{
+        visitor: {
+            id: 'VIS-TEST-USER-ID40009' // Required if user is logged in
+                ,
+            email: "test.user4@yahoo.com" // Recommended if using Pendo Feedback, or NPS Email
+                ,
+            full_name: "Test User ID40009 " // Recommended if using Pendo Feedback
+                ,
+            role: "User Role ID40009" // Optional
+                ,
+            additionalVField: "custom added to test VIS 4",
+            tag: "tag for index 40009"
+        },
+        account: {
+            id: 'ACCT-UNIQUE-ID40009' // Required if using Pendo Feedback
+                ,
+            name: "ACT-U-ID40009-NAME" // Optional
+                ,
+            is_paying: "4M USD" // Recommended if using Pendo Feedback
+                ,
+            monthly_value: "40M USD" // Recommended if using Pendo Feedback
+                ,
+            planLevel: "Plan Level Tier 4" // Optional
+                ,
+            planPrice: "4K USD per Month" // Optional
+                ,
+            creationDate: `${new Date(2020, 4, 11)}` // Optional
+                ,
+            additionalAField: "custom added to test ACCT 4",
+            tag: "tag for index 40009"
+        }
+    }
 ]
 console.log(accountIDInfo[0]);
 // export const nameID = accountIDInfo;
